@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vue JS Components</title>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div id="app">
+        <h1>User profiles</h1>
+        <div id="outer" v-for="user in users">
+            <user-card v-on:view-detail="showDetails"
+                :name="user.name" 
+                :avatar="user.avatar" 
+                :bio="user.bio" 
+                :details="user.details">
+            </user-card>
+        </div>
+        <p>Main app name: {{name}}</p>
+    </div>
+    <!-- <script src="./script.js"></script> -->
+    <script type="module" src="./script.js"></script>
+
+
+   
+   
+        <!-- <div class="card"></div>
+        <div class="card"></div>
+        <div class="card"></div>
+        <div class="card"></div>
+        <div class="card"></div> -->
+
+
+
+</body>
+</html>
